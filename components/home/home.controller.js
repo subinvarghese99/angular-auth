@@ -14,7 +14,7 @@
     vm.auth = authService;
 
     vm.getMessage = function() {
-      $http.get('http://localhost:3001/api/public').then(function(response) {
+      $http.get('http://localhost:3000/api/public').then(function(response) {
         vm.message = response.data.message;
       });
     }
@@ -23,7 +23,7 @@
     // We will append our access_token to the call and the backend will
     // verify that it is valid before sending a response.
     vm.getSecretMessage = function() {
-      $http.get('http://localhost:3001/api/private', {headers : {
+      $http.get('http://localhost:3000/api/private', {headers : {
         Authorization: 'Bearer ' + localStorage.getItem('access_token')
       }}).then(function(response) {
         vm.message = response.data.message;

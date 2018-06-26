@@ -1,4 +1,4 @@
-var AUTH0_CLIENT_ID='YOUR-AUTH0-CLIENT-ID'; 
-var AUTH0_DOMAIN='YOUR-AUTH0-DOMAIN.auth0.com'; 
-var AUTH0_CALLBACK_URL=window.location.href;
-var AUTH0_API_AUDIENCE = 'YOUR-AUTH0-API-AUDIENCE';
+var AUTH0_CLIENT_ID='0qaCWZJHRdTQW5TgOjbAQqW28oOC4x0u'; 
+var AUTH0_DOMAIN='subinvarghese99.auth0.com'; 
+var AUTH0_CALLBACK_URL='http://localhost:3000/callback';
+var AUTH0_API_AUDIENCE='http://subinvarghese99.server.com/api';

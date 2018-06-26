@@ -25,6 +25,7 @@
       responseType: 'token id_token',
       redirectUri: AUTH0_CALLBACK_URL,
       audience: AUTH0_API_AUDIENCE,
+      scope:'openid'
     });
 
     // Configure a tokenGetter so that the isAuthenticated
