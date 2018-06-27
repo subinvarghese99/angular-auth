@@ -11,6 +11,7 @@
       .navbar{
         margin-bottom: 0;
         border-radius: 0;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -19,10 +20,12 @@
       <nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
-            <a class="navbar-brand" ui-sref="home">Auth0</a>
+            <a class="navbar-brand">Auth0</a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
+              <li ng-if="auth.isAuthenticated()"><a ui-sref="home">Home</a></li>
+              <li ng-if="auth.isAuthenticated()"><a ui-sref="profile">Profile</a></li>
               <li ng-if="!auth.isAuthenticated()"><a ng-click="auth.login()">Log In</a></li>
               <li ng-if="auth.isAuthenticated()"><a ng-click="auth.logout()">Log Out</a></li>
             </ul>
@@ -42,6 +45,7 @@
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="app.run.js"></script>
     <script type="text/javascript" src="components/home/home.controller.js"></script>
+    <script type="text/javascript" src="components/profile/profile.controller.js"></script>
     <script type="text/javascript" src="components/auth/auth.service.js"></script>
   </body>
 </html>

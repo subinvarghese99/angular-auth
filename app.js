@@ -18,6 +18,14 @@
         controllerAs: 'vm'
       })
 
+    $stateProvider
+    .state('profile', {
+      url: '/profile',
+      controller: 'ProfileController',
+      templateUrl: 'components/profile/profile.html',
+      controllerAs: 'vm'
+    })
+
     // Initialization for the angular-auth0 library
     angularAuth0Provider.init({
       clientID: AUTH0_CLIENT_ID,
@@ -25,7 +33,7 @@
       responseType: 'token id_token',
       redirectUri: AUTH0_CALLBACK_URL,
       audience: AUTH0_API_AUDIENCE,
-      scope:'openid'
+      scope: 'openid profile'
     });
 
     // Configure a tokenGetter so that the isAuthenticated
